@@ -3,6 +3,7 @@
 // @namespace         https://hyperpotamus.github.io/greasemonkey/
 // @description       change position of fadebox to top
 // @include           https://xcraft.ru/*
+// @run-at document-end
 // ==/UserScript==
 
 var fb=document.getElementsById('fadeBox');
