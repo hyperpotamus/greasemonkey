@@ -6,7 +6,7 @@
 // @run-at document-end
 // ==/UserScript==
 
-var fb=document.getElementsById('fadeBox');
+var fb=document.getElementById('fadeBox');
 fb.style.top='0%';
 fb.style.left='700px';
 
