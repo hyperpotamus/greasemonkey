@@ -5,7 +5,7 @@
 // @include           https://xcraft.ru/*
 // ==/UserScript==
 
-var fb=getElementsById('fadeBox')[0];
+var fb=document.getElementsById('fadeBox')[0];
 fb.style.top='0%';
 fb.style.left='700px';
 
