@@ -17,9 +17,14 @@ function PageBitHasLoaded (zEvent)
 var sbr=document.getElementsByClassName('spy_block_resources');
 if (sbr) {
 var met=parseInt(sbr[0].getElementsByClassName("metal res-icon very-small")[0].innerHTML.replace(/[^\d.]/g, ''), 10);
-var cry=sbr[0].getElementsByClassName("crystal res-icon very-small")[0].innerHTML;
-var gas=sbr[0].getElementsByClassName("deuterium res-icon very-small")[0].innerHTML;
+var cry=parseInt(sbr[0].getElementsByClassName("crystal res-icon very-small")[0].innerHTML.replace(/[^\d.]/g, ''), 10);
+var gas=parseInt(sbr[0].getElementsByClassName("deuterium res-icon very-small")[0].innerHTML.replace(/[^\d.]/g, ''), 10);
 console.log(met);
 console.log(cry);
-console.log(gas);}
+console.log(gas);
+console.log('sum=',met+cry+gas);
+var ressum=met+cry+gas;
+var baklusha=Math.floor(1+ressum/2/4.559);
+console.log('need ',baklusha,' baklushas');
+  }
 }
