@@ -31,6 +31,6 @@ if (sbr) {
  var newElement = document.createElement('div');
  newElement.innerHTML = dstr;
  console.log(newElement.innerHTML);
- sbr.parentNode.insertBefore(newElement, sbr.nextSibling);
+ sbr.parentNode.insertBefore(newElement, sbr);
  }
 }
