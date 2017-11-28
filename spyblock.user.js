@@ -16,7 +16,7 @@ function PageBitHasLoaded (zEvent)
   console.log('spyblock loaded');
 var sbr=document.getElementsByClassName('spy_block_resources');
 if (sbr) {
-var met=sbr[0].getElementsByClassName("metal res-icon very-small")[0].innerHTML;
+var met=parseInt(sbr[0].getElementsByClassName("metal res-icon very-small")[0].innerHTML.replace(/[^\d.]/g, ''), 10);
 var cry=sbr[0].getElementsByClassName("crystal res-icon very-small")[0].innerHTML;
 var gas=sbr[0].getElementsByClassName("deuterium res-icon very-small")[0].innerHTML;
 console.log(met);
