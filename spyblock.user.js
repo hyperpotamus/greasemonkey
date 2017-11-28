@@ -19,6 +19,7 @@ if (sbr) {
  var met=parseInt(sbr[0].getElementsByClassName("metal res-icon very-small")[0].innerHTML.replace(/[^\d.]/g, ''), 10);
  var cry=parseInt(sbr[0].getElementsByClassName("crystal res-icon very-small")[0].innerHTML.replace(/[^\d.]/g, ''), 10);
  var gas=parseInt(sbr[0].getElementsByClassName("deuterium res-icon very-small")[0].innerHTML.replace(/[^\d.]/g, ''), 10);
+ var senergy=sbr[0].getElementsByClassName("energy res-icon very-small")[0].innerHTML;
  console.log(met);
  console.log(cry);
  console.log(gas);
@@ -26,11 +27,11 @@ if (sbr) {
  var ressum=met+cry+gas;
  var baklusha=Math.floor(1+ressum/2/4559);
  console.log('need ',baklusha,' baklushas');
- var dstr = '<div> need ' + baklusha + ' baklushas </div>';
- console.log(dstr);
- var newElement = document.createElement('div');
- newElement.innerHTML = dstr;
- console.log(newElement.innerHTML);
- sbr.parentNode.insertBefore(newElement, sbr);
+ sbr[0].getElementsByClassName("energy res-icon very-small")[0].innerHTML=senergy + ' ' + baklusha + ' baklushas';
+// var dstr = '<div> need ' + baklusha + ' baklushas </div>';
+// var newElement = document.createElement('div');
+// newElement.innerHTML = dstr;
+// console.log(newElement.innerHTML);
+// sbr.parentNode.insertBefore(newElement, sbr);
  }
 }
