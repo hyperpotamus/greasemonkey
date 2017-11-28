@@ -9,7 +9,7 @@
 console.log('spyblock script run');
 var iover=document.getElementsByClassName('fvk_info box_lb ui_wrapper')[0];
 var dyndiv=iover.getElementsByClassName('container')[0];
-dyndiv.addEventListener('load', PageBitHasLoaded);
+dyndiv.addEventListener('DOMNodeInserted', PageBitHasLoaded);
 
 function PageBitHasLoaded (zEvent)
 {
