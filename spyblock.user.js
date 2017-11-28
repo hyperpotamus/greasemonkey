@@ -26,9 +26,11 @@ if (sbr) {
  var ressum=met+cry+gas;
  var baklusha=Math.floor(1+ressum/2/4559);
  console.log('need ',baklusha,' baklushas');
+ var dstr = '<div> need ' + baklusha + ' baklushas </div>';
+ console.log(dstr);
  var newElement = document.createElement('div');
- newElement.innerHTML = '<div> need ' + baklusha + ' baklushas </div>';
- sbr.parentNode.insertBefore(newElement, sbr.nextSibling);
+ newElement.innerHTML = dstr;
  console.log(newElement.innerHTML);
+ sbr.parentNode.insertBefore(newElement, sbr.nextSibling);
  }
 }
