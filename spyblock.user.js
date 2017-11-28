@@ -27,7 +27,8 @@ if (sbr) {
  var ressum=met+cry+gas;
  var baklusha=Math.floor(1+ressum/2/4559);
  console.log('need ',baklusha,' baklushas');
- var lastSeven = id.substr(id.length - 7);
+ var lastSeven = senergy.substr(senergy.length - 7);
+  console.log(lastSeven);
  if (lastSeven != 'klushas') {
  sbr[0].getElementsByClassName("energy res-icon very-small")[0].innerHTML=senergy + ' ' + baklusha + ' baklushas';}
 /*
