@@ -28,8 +28,8 @@ if (sbr) {
  var baklusha=Math.floor(1+ressum/2/4559);
  console.log('need ',baklusha,' baklushas');
 // sbr[0].getElementsByClassName("energy res-icon very-small")[0].innerHTML=senergy + ' ' + baklusha + ' baklushas';
- var mydiv=sbr[0].getElementById('hyperdiv');
- if (!mydiv) {
+ var mydiv=document.getElementById('hyperdiv');
+ if (mydiv == null) {
  var dstr = '<div id='hyperdiv'> need ' + baklusha + ' baklushas </div>';
  var newElement = document.createElement('div');
  newElement.innerHTML = dstr;
