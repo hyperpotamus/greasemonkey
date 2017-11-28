@@ -24,7 +24,14 @@ console.log(cry);
 console.log(gas);
 console.log('sum=',met+cry+gas);
 var ressum=met+cry+gas;
-var baklusha=Math.floor(1+ressum/2/4.559);
+var baklusha=Math.floor(1+ressum/2/4559);
 console.log('need ',baklusha,' baklushas');
+var newElement = document.createElement('div');
+newElement.innerHTML = '<div> ' +
+    'need ' +
+    baklusha +
+    ' baklushas' +
+    '</div>';
+    sbr.parentNode.insertBefore(newElement, sbr.nextSibling);
   }
 }
