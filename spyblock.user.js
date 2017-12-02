@@ -7,14 +7,15 @@
 // ==/UserScript==
 
 console.log('spyblock script run');
-var iover=document.getElementsByClassName('fvk_info box_lb ui_wrapper')[0];
-var dyndiv=iover.getElementsByClassName('container')[0];
+var iover=document.getElementsByClassName('window-1 infos')[0];
+var dyndiv=iover.getElementsByClassName('content container')[0];
 dyndiv.addEventListener('DOMNodeInserted', PageBitHasLoaded);
 
 function PageBitHasLoaded (zEvent)
 {
+  var baklushaCapacity=4559;
   console.log('spyblock loaded');
-var sbr=document.getElementsByClassName('spy_block_resources');
+var sbr=document.getElementsByClassName('spyblock');
 if (sbr) {
  var met=parseInt(sbr[0].getElementsByClassName("metal res-icon very-small")[0].innerHTML.replace(/[^\d.]/g, ''), 10);
  var cry=parseInt(sbr[0].getElementsByClassName("crystal res-icon very-small")[0].innerHTML.replace(/[^\d.]/g, ''), 10);
@@ -23,21 +24,16 @@ if (sbr) {
  console.log(met);
  console.log(cry);
  console.log(gas);
+ console.log(senergy);
  console.log('sum=',met+cry+gas);
  var ressum=met+cry+gas;
- var baklusha=Math.floor(1+ressum/2/4559);
+ var baklusha=Math.floor(1+ressum/2/baklushaCapacity);
  console.log('need ',baklusha,' baklushas');
  var lastSeven = senergy.substr(senergy.length - 7);
   console.log(lastSeven);
  if (lastSeven != 'klushas') {
  sbr[0].getElementsByClassName("energy res-icon very-small")[0].innerHTML=senergy + ' ' + baklusha + ' baklushas';}
 /*
- var mydiv=document.getElementById('hyperdiv');
- if (mydiv == null) {
- var dstr = '<div id='hyperdiv'> need ' + baklusha + ' baklushas </div>';
- var newElement = document.createElement('div');
- newElement.innerHTML = dstr;
- console.log(newElement.innerHTML);
- sbr.parentNode.insertBefore(newElement, sbr);}*/
+*/
  }
 }
