@@ -10,7 +10,7 @@ console.log('spyblock script run');
 var iover=document.getElementsByClassName('window-1 infos')[0];
 var dyndiv=iover.getElementsByClassName('content container')[0];
 dyndiv.addEventListener('DOMNodeInserted', PageBitHasLoaded);
-var maindiv=iover.getElementsByClassName('adp__content')[0];
+var maindiv=document.getElementsByClassName('adp__content')[0];
 maindiv.addEventListener('DOMNodeInserted', MainDivHasLoaded);
 var baknum=0;
 
