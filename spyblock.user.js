@@ -43,7 +43,7 @@ if (sbr) {
 }
 function MainDivHasLoaded (zEvent) {
   console.log('MainDiv loaded ',baknum);
-  var bfield=document.getElementsById('fleet_ship232');
+  var bfield=document.getElementById('fleet_ship232');
   if (bfield) {
     console.log('baklushas set');
     bfield.value=baknum;
