@@ -10,9 +10,12 @@ console.log('spyblock script run');
 var iover=document.getElementsByClassName('window-1 infos')[0];
 var dyndiv=iover.getElementsByClassName('content container')[0];
 dyndiv.addEventListener('DOMNodeInserted', PageBitHasLoaded);
-var maindiv=document.getElementsByClassName('adp__content')[0];
-maindiv.addEventListener('DOMNodeInserted', MainDivHasLoaded);
+var mainframe=document.getElementById('framebox');
+if (mainframe) {
+  console.log('mainframe listener added');
+  mainframe.addEventListener('DOMNodeInserted', MainDivHasLoaded);}
 var baknum=0;
+var loads=0;
 
 function PageBitHasLoaded (zEvent)
 {
@@ -42,7 +45,8 @@ if (sbr) {
  }
 }
 function MainDivHasLoaded (zEvent) {
-  console.log('MainDiv loaded ',baknum);
+  console.log('mainframe loaded ',loads, ' timas; ',baknum);
+  loads=loads+1;
   var bfield=document.getElementById('fleet_ship232');
   if (bfield) {
     console.log('baklushas set');
