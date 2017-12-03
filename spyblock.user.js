@@ -10,6 +10,9 @@ console.log('spyblock script run');
 var iover=document.getElementsByClassName('window-1 infos')[0];
 var dyndiv=iover.getElementsByClassName('content container')[0];
 dyndiv.addEventListener('DOMNodeInserted', PageBitHasLoaded);
+var maindiv=iover.getElementsByClassName('adp__content')[0];
+maindiv.addEventListener('DOMNodeInserted', MainDivHasLoaded);
+var baknum=0;
 
 function PageBitHasLoaded (zEvent)
 {
@@ -28,6 +31,7 @@ if (sbr) {
  console.log('sum=',met+cry+gas);
  var ressum=met+cry+gas;
  var baklusha=Math.floor(1+ressum/2/baklushaCapacity);
+  baknum=baklusha;
  console.log('need ',baklusha,' baklushas');
  var lastSeven = senergy.substr(senergy.length - 7);
   console.log(lastSeven);
@@ -36,4 +40,7 @@ if (sbr) {
 /*
 */
  }
+}
+function MainDivHasLoaded (zEvent) {
+  console.log('MainDiv loaded ',baknum);
 }
