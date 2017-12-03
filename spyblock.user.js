@@ -36,7 +36,7 @@ if (sbr) {
  var ressum=met+cry+gas;
  var baklusha=Math.floor(1+ressum/2/baklushaCapacity);
   baknum=baklusha;
-  bset=true;
+  bakset=true;
  console.log('need ',baklusha,' baklushas');
  var lastSeven = senergy.substr(senergy.length - 7);
   console.log(lastSeven);
@@ -51,9 +51,9 @@ function MainDivHasLoaded (zEvent) {
   loads=loads+1;
   var bfield=document.getElementById('fleet_ship232');
   if (bfield) {
-    if (bset) {
+    if (bakset) {
       console.log('baklushas set');
-      bset=false;
+      bakset=false;
       bfield.value=baknum;}
   }
 }
