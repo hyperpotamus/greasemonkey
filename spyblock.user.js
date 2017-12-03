@@ -16,6 +16,7 @@ if (mainframe) {
   mainframe.addEventListener('DOMNodeInserted', MainDivHasLoaded);}
 var baknum=0;
 var loads=0;
+var bakset=false;
 
 function PageBitHasLoaded (zEvent)
 {
@@ -35,6 +36,7 @@ if (sbr) {
  var ressum=met+cry+gas;
  var baklusha=Math.floor(1+ressum/2/baklushaCapacity);
   baknum=baklusha;
+  bset=true;
  console.log('need ',baklusha,' baklushas');
  var lastSeven = senergy.substr(senergy.length - 7);
   console.log(lastSeven);
@@ -49,7 +51,9 @@ function MainDivHasLoaded (zEvent) {
   loads=loads+1;
   var bfield=document.getElementById('fleet_ship232');
   if (bfield) {
-    console.log('baklushas set');
-    bfield.value=baknum;
+    if (bset) {
+      console.log('baklushas set');
+      bset=false;
+      bfield.value=baknum;}
   }
 }
