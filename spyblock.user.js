@@ -43,4 +43,8 @@ if (sbr) {
 }
 function MainDivHasLoaded (zEvent) {
   console.log('MainDiv loaded ',baknum);
+  if (var bfield=document.getElementsById('fleet_ship232')) {
+    console.log('max baklushas = ',bfield.data-input-value-max);
+    bfield.value=baknum;
+  }
 }
