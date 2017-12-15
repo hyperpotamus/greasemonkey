@@ -7,7 +7,7 @@
 // ==/UserScript==
 
 console.log('spyblock script run');
-var iover=document.getElementsByClassName('window-1 infos')[0];
+var iover=document.getElementsByClassName('window-1 small infos-user-awards-tech')[0];
 var dyndiv=iover.getElementsByClassName('content container')[0];
 dyndiv.addEventListener('DOMNodeInserted', PageBitHasLoaded);
 var mainframe=document.getElementById('framebox');
